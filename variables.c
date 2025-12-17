@@ -2,13 +2,12 @@
 int main()
 {
     //variable = a reusable container
-    char grade = 'A';
-    /*
-    Characters take single quotes 
-    they have a format specifier %c
+    /*Strings = array of characters
+    uses double quotes
+    format specifier - %s
     */
-   printf("Grade: %c\n",grade);
-   printf("Excellent!\n");
-   
+   char name [] = "Ludwig Siisi";
+   printf("Hello, %s!\n",name);
+
     return 0;
 }
