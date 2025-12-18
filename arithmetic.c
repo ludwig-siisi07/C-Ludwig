@@ -13,5 +13,10 @@ int main()
     printf("%d\n",x);
     printf("%d\n",y);
 
+    //augmented operators
+    x *= 5;
+    printf("%d",x);
+    
+
     return 0;
 }
