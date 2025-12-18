@@ -15,8 +15,13 @@ int main()
 
     printf("Enter your grade: ");
     scanf(" %c", &grade);
+
+    getchar();
+    printf("Enter your fullname: ");
+    fgets(name, sizeof(name), stdin);
     /*%c unlike the d,f and s doesn't ignore whitespaces in buffer!
     the leftover \n from buffer can be cleared with space before %c
+    since %s blocks whitespaces full names cant be entered so use fgets
     */
     printf("%d\n", age);
     printf("%.2f\n", gpa);
