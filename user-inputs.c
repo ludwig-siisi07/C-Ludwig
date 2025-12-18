@@ -2,10 +2,10 @@
 int main()
 {
     //declaring without values creates undefined behaviour
-    int age;
-    float gpa;
-    char grade;
-    char name[30];
+    int age = 0;
+    float gpa =0.0f;
+    char grade = '\0'; //null terminator
+    char name[30] = "";
 
     printf("%d\n", age);
         printf("%f\n", gpa);
