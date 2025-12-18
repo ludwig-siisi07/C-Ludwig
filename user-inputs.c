@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<string.h>
+
 int main()
 {
     //declaring without values creates undefined behaviour
@@ -19,14 +21,16 @@ int main()
     getchar();
     printf("Enter your fullname: ");
     fgets(name, sizeof(name), stdin);
+    name[strlen(name)-1]= '\0';
     /*%c unlike the d,f and s doesn't ignore whitespaces in buffer!
     the leftover \n from buffer can be cleared with space before %c
     since %s blocks whitespaces full names cant be entered so use fgets
     */
+    printf("%s\n", name);
     printf("%d\n", age);
     printf("%.2f\n", gpa);
     printf("%c\n", grade);
-    printf("%s\n", name);
+
 
 
     return 0;
