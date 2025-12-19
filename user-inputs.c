@@ -25,13 +25,21 @@ int main()
     /*%c unlike the d,f and s doesn't ignore whitespaces in buffer!
     the leftover \n from buffer can be cleared with space before %c
     since %s blocks whitespaces full names cant be entered so use fgets
+    fgets() reads entire line
     */
     printf("%s\n", name);
     printf("%d\n", age);
     printf("%.2f\n", gpa);
     printf("%c\n", grade);
 
-
+    /* SCANF() BEFORE FGETS()
+    int age;
+    char name[50];
+    scanf("%d", &age);   Leaves '\n' in buffer
+    getchar();           Consume the leftover '\n'
+    fgets(name, 50, stdin);   Now it waits for input!
+    name[strlen(name)-1] = '\0';
+    */
 
     return 0;
 }
