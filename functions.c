@@ -1,23 +1,20 @@
 #include<stdio.h>
-#include<string.h>
+#include<stdbool.h>
+bool age_check(int age){
+    return age >= 18;
+    }
 
-void christmas(char name[], int age){
-    printf("Happy Birthday, %s!\n", name);
-    printf("You are %d years old now.",age);
-}
-int main()
-{
-    char name[50] = "";
+int main(){
     int age = 0;
 
-    printf("Enter your name: ");
-    fgets(name, sizeof(name), stdin);
-    name[strlen(name)-1] = '\0';
-    
     printf("Enter your age: ");
     scanf("%d", &age);
-
-    /*Functions provide resusable code blocks*/
-    christmas(name,age);
+    
+    if (age_check(age)){
+        printf("You can sign up!");
+    }
+    else{
+        printf("NOT AN ADULT!");
+    }
     return 0;
 }
