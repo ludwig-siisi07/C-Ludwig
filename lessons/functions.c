@@ -1,28 +1,42 @@
 #include<stdio.h>
 #include<stdbool.h>
+#include<string.h>
 
-bool GreaterNum(int num1, int num2){
-    return num1 > num2;
-}
+void hello(char name[], int age);
+bool age_check(int age);
+
 int main(){
-    int num1 = 0.0;
-    int num2 = 0;
 
-    printf("NUM 1: ");
-    scanf("%d", &num1);
-    printf("NUM 2: ");
-    scanf("%d", &num2);
+    /*FUNCTION PROTOTYPES:
+    
+    Provide compiler w/ info about function
+    Enable type checking and allow functions to be used before they're defined
 
-    if(GreaterNum(num1,num2)){
-        printf("%d is greater than %d", num1,num2);
-    }
-    else if(num1 == num2){
-        printf("%d is equal to %d", num1 ,num2);
+    */
+    char name[50] ="";
+    printf("Name: ");
+    fgets(name, sizeof(name),stdin);
+    name[strlen(name)-1] = '\0';
+
+    int age = 0;
+    printf("Age: ");
+    scanf("%d", &age);
+
+    hello(name, age);
+    if(age_check(age)){
+        printf("You are old enough to work at the Krusty Krab");
     }
     else{
-        printf("%d is less than %d", num1 ,num2);
-        
+        printf("SORRY!\nYou must be 16+ to work at the Krusty Krab");
     }
 
     return 0;
+}
+
+void hello(char name[], int age){
+    printf("Hello %s,\n", name);
+    printf("You are %d years old.\n",age);
+}
+bool age_check(int age){
+    return age >= 16;
 }
