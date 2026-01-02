@@ -1,31 +1,17 @@
 #include<stdio.h>
-#include<string.h>
+#include<windows.h>
 
 int main()
 {
-    /*
-    while(true){
-        if false, skiops the loop;
-        if true, runs code or inputs;
-        repeats.
-        }
-    do{
-        code;
-    } while (condition);
-    runs the body once| checks the condition| repeats if true
-    One run is guanranteed unlike the while loop*/
-    
-    char name[50] ="";
-    
-    printf("Enter your name: ");
-    fgets(name,sizeof(name),stdin);
-    name[strlen(name) - 1] = '\0';
+  /*FOR LOOPS - repeat code for a limited number of times
+  for(Initialization; Condition; Update)
+  */
 
-    while(strlen(name) == 0){
-        printf("Name cannot be empty!Pls enter your nae: ");
-        fgets(name,sizeof(name),stdin);
-        name[strlen(name) - 1] = '\0';
+    for(int a = 10; a != 0; a--){
+        Sleep(1000); //In MilliSeconds
+        printf("%d\n",a);    
     }
-    printf("Hello %s!", name);
+    printf("HAPPY NEW YEAR!");
+
     return 0;
 }
