@@ -7,9 +7,10 @@ int main()
     int min = 1;
     int max = 100;
     int user_input = 0;
+    int number_of_guesses = 0;
     srand(time(NULL));
     int randomNumber = (rand() %  (max-min + 1)) + min; 
-    
+
     
     printf("Guess a number between 1-100: ");
     scanf("%d",&user_input);
@@ -32,10 +33,12 @@ int main()
         
         
         printf("Guess a number between 1-100: ");
-        scanf("%d",&user_input);     
+        scanf("%d",&user_input);  
+        number_of_guesses ++;   
     }
     
-    printf("YOU GUESSED RIGHT\nWELL DONE!\n");
+    printf("\nYOU GUESSED RIGHT\nWELL DONE!\n");
+    printf("Number of Guesses: %d",number_of_guesses);
 
     return 0;
 }
