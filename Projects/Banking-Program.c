@@ -1,8 +1,8 @@
 #include<stdio.h>
 float amount = 0.0f;
-float checkBalance();
-float depositMoney();
-float withdrawCash();
+void checkBalance();
+void depositMoney();
+void withdrawCash();
 int main()
 {
     float deposit = 0.0f;
@@ -35,17 +35,17 @@ int main()
 
     return 0;
 }
-float checkBalance(){
+void checkBalance(){
 	printf("Current Balance: $%.2f\n\n",amount);
 }
-float depositMoney(){
+void depositMoney(){
 	float deposit = 0.0f;
     printf("Enter amount to be deposited: ");
     scanf("%f",&deposit);
 	amount += deposit;
 	printf("You have successfully deposited $%.2f into your account.\nCurrent balance: $%.2f\n\n",deposit, amount);
 }
-float withdrawCash(){
+void withdrawCash(){
 	float withdrawal = 0.0f;
     printf("Enter amount to be withdrawn: ");
     scanf("%f",&withdrawal);
