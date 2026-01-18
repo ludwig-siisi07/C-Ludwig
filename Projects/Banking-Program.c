@@ -25,13 +25,13 @@ int main()
     {
         withdrawCash();
     }
-
     printf("Would you like to perform another banking service?\nEnter 'Y' for Yes and 'N' for No:\n");
     scanf(" %c", &proceed);
 
         
     } while (proceed == 'Y' || proceed =='y');
-    
+    printf("\nTHANK YOU FOR USING ABSA ONLINE BANKING SERVICES");
+
 
     return 0;
 }
