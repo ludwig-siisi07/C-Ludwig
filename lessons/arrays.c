@@ -2,16 +2,20 @@
 
 int main()
 {
-    //array = variable w more than one value 
-    int scores[5] = {0};//5 indicates number of array elements 
-    for (int i = 0; i < 5; i++)
+    //2D array = an array where each elementis an array
+    // array[][]= {{},{},{}};
+
+    int numbers[][3]= {{1,2,3},
+                       {4,5,6},
+                       {7,8,9}}; 
+    for (int i = 0; i < 3; i++)
     {
-        printf("Enter a score: ");
-        scanf("%d",&scores[i]);
+        for (int j = 0; j < 3; j++)
+        {
+        printf("%d ", numbers[i][j]);
+        }
+        printf("\n");
     }
-    for (int i = 0; i < 5; i++)
-    {
-        printf("%d ",scores[i]);
-    }
+    
     return 0;
 }
