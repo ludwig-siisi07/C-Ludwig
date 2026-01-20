@@ -1,7 +1,5 @@
 # C Programming Learning Journey
 
-Following [Bro Code's 6-hour C Programming Course](https://www.youtube.com/watch?v=87SH2Cn0s9A) to learn C from scratch.
-
 ## Goal
 Build a working clock application while learning C fundamentals.
 
