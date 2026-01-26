@@ -2,20 +2,23 @@
 
 int main()
 {
-    //2D array = an array where each elementis an array
-    // array[][]= {{},{},{}};
+    //Array of strings
 
-    int numbers[][3]= {{1,2,3},
-                       {4,5,6},
-                       {7,8,9}}; 
-    for (int i = 0; i < 3; i++)
+    char fruits[][10]= {"Apple",
+                        "Banana",
+                        "Coconut"};
+    //1st bracket specifies number of elements
+    //10(second bracket) specifies max character of each string
+    int size = sizeof(fruits)/sizeof(fruits[0]);
+    fruits[0][0] = 'e';
+    fruits[0][4] = 'A';
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < 3; j++)
-        {
-        printf("%d ", numbers[i][j]);
-        }
-        printf("\n");
+        printf("%s\n",fruits[i]);
     }
     
+
+
+
     return 0;
 }
