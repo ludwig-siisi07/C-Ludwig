@@ -15,16 +15,22 @@ int main()
         printf("%s\n%s", questions[i],multiple_choice[i]);
         printf("\n");
         scanf(" %c",&user_input);
-        printf("\n");
+
         user_input = toupper(user_input);
         if (user_input == answers[i])
         {
+            printf("CORRECT!\n\n");
             score++;
+
         }
-        
+        else
+        {
+            printf("INCORRECT!\nThe Correct Answer is %c\n\n",answers[i]);
+        }
     }
+    
     printf("\nEND OF QUIZ!\n");
-    printf("SCORE: %d",score);
+    printf("SCORE: %d / %d",score,size);
     
     return 0;
 }
