@@ -24,7 +24,7 @@ int main()
      int hours = 18;
      int minutes = 19;
      //02 gives the padding
-     
+      
      printf("It's %02d:%02d %s", hours, minutes,(hours < 12) ? "AM":"PM");
      return 0;
 }
